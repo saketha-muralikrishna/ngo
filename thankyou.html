@@ -448,5 +448,14 @@
         </p>
       </div>
     </footer>
+     <script>
+        // This script will remove any query parameters from the URL
+        // It should be placed at the end of the <body> or after all content is loaded
+        if (window.location.search) { // Check if there are any query parameters
+            const cleanURL = window.location.origin + window.location.pathname;
+            // Use replaceState to change the URL without reloading the page
+            window.history.replaceState({}, document.title, cleanURL);
+        }
+    </script>
   </body>
 </html>
