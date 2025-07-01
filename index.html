@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KCS256G4");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awareness: Be the Change - Hope & Hands Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Basic CSS for demonstration - In a real project, link to an external CSS file */
+      :root {
+        --primary-color: #007bff; /* A vibrant blue for main actions */
+        --secondary-color: #28a745; /* A supportive green for success/impact */
+        --accent-color: #ffc107; /* A warm yellow for highlights */
+        --text-dark: #333;
+        --text-light: #f8f9fa;
+        --bg-light: #f8f9fa;
+        --bg-white: #ffffff;
+        --border-color: #ddd;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: var(--text-dark);
+        line-height: 1.7;
+        background-color: var(--bg-light);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Header */
+      #main-header {
+        background-color: var(--bg-white);
+        padding: 15px 0;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      #main-header .logo {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+      #main-header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      #main-header nav ul li {
+        margin-left: 25px;
+      }
+      #main-header nav ul li a {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      #main-header nav ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Hero Section */
+      #awareness-hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+          url("https://via.placeholder.com/1500x700/808080/ffffff?text=Hands+Reaching+Out")
+            no-repeat center center/cover;
+        background-position: 50% 30%; /* Adjust background image position */
+        color: var(--text-light);
+        text-align: center;
+        padding: 100px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 550px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      #hero-content-awareness {
+        max-width: 1000px;
+      }
+      #awareness-hero-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 4.2em;
+        margin-bottom: 20px;
+        line-height: 1.1;
+      }
+      #awareness-hero-subtitle {
+        font-size: 1.8em;
+        margin-bottom: 40px;
+        font-weight: 400;
+      }
+      .cta-button {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        padding: 18px 40px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 1.4em;
+        font-weight: 700;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+      }
+      .cta-button:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+      }
+
+      /* Introduction Section */
+      #introduction-section {
+        padding: 80px 20px;
+        background-color: var(--bg-white);
+        border-bottom: 1px solid var(--border-color);
+        text-align: center;
+      }
+      #intro-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 3em;
+        color: var(--primary-color);
+        margin-bottom: 25px;
+      }
+      #intro-description {
+        font-size: 1.3em;
+        max-width: 900px;
+        margin: 0 auto 40px auto;
+        color: #555;
+      }
+      .image-text-block {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+        margin-top: 50px;
+        text-align: left;
+      }
+      .image-text-block.reversed {
+        flex-direction: row-reverse;
+      }
+      .image-text-block .text-content {
+        flex: 2;
+        min-width: 300px;
+      }
+      .image-text-block .image-content {
+        flex: 1;
+        min-width: 280px;
+        text-align: center;
+      }
+      .image-text-block img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+      .image-text-block h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.2em;
+        color: var(--secondary-color);
+        margin-bottom: 15px;
+      }
+      .image-text-block p {
+        font-size: 1.15em;
+        color: #444;
+      }
+
+      /* The Problem Section */
+      #problem-section {
+        padding: 80px 20px;
+        text-align: center;
+        background-color: var(--bg-light);
+        border-bottom: 1px solid var(--border-color);
+      }
+      #problem-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 3em;
+        color: #dc3545; /* Red for emphasis on problem */
+        margin-bottom: 25px;
+      }
+      #problem-description {
+        font-size: 1.3em;
+        max-width: 900px;
+        margin: 0 auto 50px auto;
+        color: #555;
+      }
+      .problem-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+      }
+      .stat-item {
+        background-color: var(--bg-white);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        text-align: center;
+      }
+      .stat-item .number {
+        font-family: "Montserrat", sans-serif;
+        font-size: 3.5em;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+      }
+      .stat-item .label {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #666;
+      }
+
+      /* Our Solution Section */
+      #solution-section {
+        padding: 80px 20px;
+        background-color: var(--bg-white);
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+      }
+      #solution-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 3em;
+        color: var(--secondary-color); /* Green for solution */
+        margin-bottom: 25px;
+      }
+      #solution-description {
+        font-size: 1.3em;
+        max-width: 900px;
+        margin: 0 auto 50px auto;
+        color: #555;
+      }
+      .solution-steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+      }
+      .solution-step-item {
+        background-color: var(--bg-light);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+      .solution-step-item .icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+      }
+      .solution-step-item h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8em;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+      }
+      .solution-step-item p {
+        font-size: 1.1em;
+        color: #555;
+      }
+
+      /* Testimonials/Stories Section (Optional but impactful) */
+      #stories-section {
+        padding: 80px 20px;
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        text-align: center;
+      }
+      #stories-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 3em;
+        margin-bottom: 50px;
+      }
+      .story-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+      }
+      .story-card {
+        background-color: rgba(255, 255, 255, 0.15);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        text-align: left;
+        transition: transform 0.3s ease;
+      }
+      .story-card:hover {
+        transform: translateY(-5px);
+      }
+      .story-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .story-card-content {
+        padding: 25px;
+      }
+      .story-card-content h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        color: var(--accent-color);
+      }
+      .story-card-content p {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+      }
+      .story-card-content .read-more {
+        display: inline-block;
+        color: var(--text-light);
+        text-decoration: underline;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      .story-card-content .read-more:hover {
+        color: var(--accent-color);
+      }
+
+      /* Final Call to Action Section (with Signup) */
+      #final-cta-section {
+        padding: 80px 20px;
+        text-align: center;
+        background-color: var(--bg-white);
+      }
+      #final-cta-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 3em;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+      }
+      #final-cta-description {
+        font-size: 1.3em;
+        max-width: 900px;
+        margin: 0 auto 40px auto;
+      }
+      .cta-group {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .cta-button.secondary-cta {
+        background-color: #6c757d; /* Grey for a less prominent action */
+      }
+      .cta-button.secondary-cta:hover {
+        background-color: #5a6268;
+      }
+
+      /* Footer */
+      #main-footer {
+        background-color: #333;
+        color: var(--text-light);
+        padding: 40px 0;
+        text-align: center;
+        font-size: 0.9em;
+      }
+      #main-footer .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      #main-footer .footer-links ul li {
+        margin: 0 15px;
+      }
+      #main-footer .footer-links ul li a {
+        color: var(--text-light);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      #main-footer .footer-links ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 992px) {
+        #awareness-hero-title {
+          font-size: 3.2em;
+        }
+        #awareness-hero-subtitle {
+          font-size: 1.5em;
+        }
+        #intro-title,
+        #problem-title,
+        #solution-title,
+        #stories-title,
+        #final-cta-title {
+          font-size: 2.5em;
+        }
+        .image-text-block,
+        .image-text-block.reversed {
+          flex-direction: column;
+          text-align: center;
+        }
+        .image-text-block .text-content,
+        .image-text-block .image-content {
+          min-width: unset;
+          width: 100%;
+        }
+        .problem-stats-grid,
+        .solution-steps-grid,
+        .story-grid {
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+      }
+
+      @media (max-width: 768px) {
+        #main-header {
+          flex-direction: column;
+        }
+        #main-header nav ul {
+          margin-top: 15px;
+        }
+        #awareness-hero-section {
+          padding: 60px 20px;
+          min-height: 350px;
+        }
+        #awareness-hero-title {
+          font-size: 2.5em;
+        }
+        #awareness-hero-subtitle {
+          font-size: 1.2em;
+        }
+        .cta-button {
+          font-size: 1.2em;
+          padding: 15px 30px;
+        }
+        #intro-title,
+        #problem-title,
+        #solution-title,
+        #stories-title,
+        #final-cta-title {
+          font-size: 2em;
+        }
+        #intro-description,
+        #problem-description,
+        #solution-description,
+        #final-cta-description {
+          font-size: 1em;
+        }
+        .problem-stats-grid,
+        .solution-steps-grid,
+        .story-grid {
+          grid-template-columns: 1fr;
+        }
+        .stat-item .number {
+          font-size: 3em;
+        }
+        .cta-group {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KCS256G4"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header id="main-header" class="container">
+      <a href="index.html" class="logo" id="header-logo"
+        >Hope & Hands Foundation</a
+      >
+      <nav>
+        <ul id="main-navigation">
+          <li><a href="#introduction-section" id="nav-about">Our Cause</a></li>
+          <li><a href="#problem-section" id="nav-problem">The Challenge</a></li>
+          <li>
+            <a href="#solution-section" id="nav-solution">Our Solution</a>
+          </li>
+          <li><a href="#stories-section" id="nav-stories">Stories</a></li>
+          <li>
+            <a href="sign.html" class="cta-button" id="nav-signup-button"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="awareness-hero-section">
+      <div class="container" id="hero-content-awareness">
+        <h1 id="awareness-hero-title">
+          Unite for a World Without Hunger & Illiteracy.
+        </h1>
+        <p id="awareness-hero-subtitle">
+          Every child deserves food, education, and a chance to thrive. Join us
+          in making a profound difference.
+        </p>
+        <a href="donations.html" class="cta-button" id="hero-donate-cta-button"
+          >Make a Donation Today</a
+        >
+      </div>
+    </section>
+
+    <section id="introduction-section">
+      <div class="container">
+        <h2 id="intro-title">A Glimpse into Tomorrow: Our Shared Vision</h2>
+        <p id="intro-description">
+          At Hope & Hands Foundation, we believe in a future where basic
+          necessities are a right, not a privilege. We're driven by the
+          conviction that collective action can overcome even the most
+          formidable challenges.
+        </p>
+
+        <div class="image-text-block" id="vision-block-1">
+          <div class="text-content">
+            <h3>Empowering Through Education</h3>
+            <p>
+              Millions of children globally are denied access to quality
+              education, trapping them in cycles of poverty. We're committed to
+              breaking these barriers, providing schools, learning materials,
+              and dedicated teachers to empower young minds.
+            </p>
+            <p>
+              An educated child is a brighter future, not just for themselves
+              but for their entire community. We focus on foundational learning
+              and skill development to ensure long-term impact.
+            </p>
+          </div>
+          <div class="image-content">
+            <img
+              src="https://via.placeholder.com/500x350/28a745/ffffff?text=Children+Learning"
+              alt="Children learning in a classroom"
+            />
+          </div>
+        </div>
+
+        <div class="image-text-block reversed" id="vision-block-2">
+          <div class="text-content">
+            <h3>Nourishing Communities, Building Health</h3>
+            <p>
+              Malnutrition and lack of access to healthcare are silent crises
+              affecting vulnerable populations. Our programs ensure nutritious
+              meals for children and families, alongside providing essential
+              medical aid and promoting hygiene practices.
+            </p>
+            <p>
+              A healthy community is a productive community. We work to
+              establish sustainable food sources and accessible health services
+              that foster long-term well-being.
+            </p>
+          </div>
+          <div class="image-content">
+            <img
+              src="https://via.placeholder.com/500x350/007bff/ffffff?text=Community+Kitchen"
+              alt="Community kitchen providing food"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem-section">
+      <div class="container">
+        <h2 id="problem-title">The Urgent Reality We Face</h2>
+        <p id="problem-description">
+          Beneath the surface of progress, critical challenges persist that
+          demand our immediate attention and collective action.
+        </p>
+
+        <div class="problem-stats-grid" id="problem-stats">
+          <div class="stat-item" id="stat-hunger">
+            <div class="number">~828M</div>
+            <div class="label">People Go Hungry Globally</div>
+            <p class="small-text">Source: UN, 2022</p>
+          </div>
+          <div class="stat-item" id="stat-illiteracy">
+            <div class="number">~250M</div>
+            <div class="label">Children Lack Basic Literacy Skills</div>
+            <p class="small-text">Source: UNESCO, 2023</p>
+          </div>
+          <div class="stat-item" id="stat-poverty">
+            <div class="number">~700M</div>
+            <div class="label">Live in Extreme Poverty</div>
+            <p class="small-text">Source: World Bank, 2024</p>
+          </div>
+        </div>
+        <p id="problem-call-to-action">
+          These aren't just numbers; they represent lives facing immense
+          hardship. But together, we can change this reality.
+        </p>
+      </div>
+    </section>
+
+    <section id="solution-section">
+      <div class="container">
+        <h2 id="solution-title">Our Proven Approach to Lasting Change</h2>
+        <p id="solution-description">
+          Hope & Hands Foundation employs comprehensive, community-led
+          strategies to address these challenges effectively and sustainably.
+        </p>
+        <div class="solution-steps-grid" id="solution-steps">
+          <div class="solution-step-item" id="step-assessment">
+            <img
+              src="https://via.placeholder.com/70/007bff/ffffff?text=Assess"
+              class="icon"
+              alt="Assessment Icon"
+            />
+            <h3>Holistic Assessment</h3>
+            <p>
+              We begin by thoroughly understanding the unique needs and
+              challenges of each community we serve.
+            </p>
+          </div>
+          <div class="solution-step-item" id="step-programs">
+            <img
+              src="https://via.placeholder.com/70/28a745/ffffff?text=Program"
+              class="icon"
+              alt="Program Icon"
+            />
+            <h3>Targeted Programs</h3>
+            <p>
+              We design and implement specific programs focusing on education,
+              health, and sustainable livelihoods.
+            </p>
+          </div>
+          <div class="solution-step-item" id="step-empowerment">
+            <img
+              src="https://via.placeholder.com/70/ffc107/333333?text=Empower"
+              class="icon"
+              alt="Empowerment Icon"
+            />
+            <h3>Community Empowerment</h3>
+            <p>
+              We empower local leaders and community members to take ownership
+              of their development.
+            </p>
+          </div>
+          <div class="solution-step-item" id="step-sustainability">
+            <img
+              src="https://via.placeholder.com/70/8c52ff/ffffff?text=Sustain"
+              class="icon"
+              alt="Sustainability Icon"
+            />
+            <h3>Long-Term Sustainability</h3>
+            <p>
+              Our goal is to build self-sufficient communities that can thrive
+              independently in the long run.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories-section">
+      <div class="container">
+        <h2 id="stories-title">
+          Real People, Real Impact: Stories from the Ground
+        </h2>
+        <div class="story-grid" id="featured-stories">
+          <div class="story-card" id="story-card-1">
+            <img
+              src="https://via.placeholder.com/400x200/90EE90/333333?text=Girl+with+Book"
+              alt="A smiling girl holding a book"
+            />
+            <div class="story-card-content">
+              <h3>Priya's Journey to School</h3>
+              <p>
+                Priya, 8, once worked to support her family. Thanks to our
+                education program, she's now excelling in school and dreams of
+                becoming a teacher.
+              </p>
+              <a href="story-priya.html" class="read-more" id="story-link-1"
+                >Read More &rarr;</a
+              >
+            </div>
+          </div>
+          <div class="story-card" id="story-card-2">
+            <img
+              src="https://via.placeholder.com/400x200/ADD8E6/333333?text=Healthy+Child"
+              alt="A healthy child eating a meal"
+            />
+            <div class="story-card-content">
+              <h3>The Village That Fought Malnutrition</h3>
+              <p>
+                Learn how our health and nutrition initiatives transformed a
+                village, reducing malnutrition rates by 60% in just two years.
+              </p>
+              <a href="story-village.html" class="read-more" id="story-link-2"
+                >Read More &rarr;</a
+              >
+            </div>
+          </div>
+          <div class="story-card" id="story-card-3">
+            <img
+              src="https://via.placeholder.com/400x200/FFA07A/333333?text=Woman+Sewing"
+              alt="A woman sewing on a machine"
+            />
+            <div class="story-card-content">
+              <h3>Empowering Lakshmi: A Tailoring Success</h3>
+              <p>
+                Lakshmi gained new skills through our vocational training. Now,
+                she runs a thriving tailoring business, securing her family's
+                future.
+              </p>
+              <a href="story-lakshmi.html" class="read-more" id="story-link-3"
+                >Read More &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="final-cta-section">
+      <div class="container">
+        <h2 id="final-cta-title">
+          Your Compassion is the Catalyst for Change.
+        </h2>
+        <p id="final-cta-description">
+          We invite you to join our movement. Whether through volunteering,
+          subscribing for updates, or making a donation, your involvement
+          creates ripples of hope.
+        </p>
+        <div class="cta-group">
+          <a href="sign.html" class="cta-button" id="final-signup-cta-button"
+            >Sign Up to Volunteer</a
+          >
+          <a
+            href="donations.html"
+            class="cta-button secondary-cta"
+            id="final-donate-cta-button"
+            >Make a Donation</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer id="main-footer">
+      <div class="container">
+        <div class="footer-links" id="footer-navigation">
+          <ul>
+            <li><a href="#introduction-section">Our Cause</a></li>
+            <li><a href="#problem-section">The Challenge</a></li>
+            <li><a href="#solution-section">Our Solution</a></li>
+            <li><a href="#stories-section">Stories</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <p id="footer-copyright">
+          &copy; 2025 Hope & Hands Foundation. All rights reserved.
+        </p>
+        <p id="footer-address">
+          123 Charity Lane, Compassion City, Hyderabad, Telangana 5000XX
+        </p>
+        <p id="footer-contact-info">
+          Email: info@hopeandhands.org | Phone: +91 88888 77777
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

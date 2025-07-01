@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KCS256G4");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Now - Hope & Hands Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Basic CSS for demonstration - In a real project, link to an external CSS file */
+      :root {
+        --primary-color: #007bff; /* A vibrant blue for main actions */
+        --secondary-color: #28a745; /* A supportive green for success/impact */
+        --accent-color: #ffc107; /* A warm yellow for highlights */
+        --text-dark: #333;
+        --text-light: #f8f9fa;
+        --bg-light: #f8f9fa;
+        --bg-white: #ffffff;
+        --border-color: #ddd;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: var(--text-dark);
+        line-height: 1.7;
+        background-color: var(--bg-light);
+      }
+
+      .container {
+        max-width: 960px; /* Slightly narrower for donation forms */
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Header */
+      #main-header {
+        background-color: var(--bg-white);
+        padding: 15px 0;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      #main-header .logo {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+      #main-header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      #main-header nav ul li {
+        margin-left: 25px;
+      }
+      #main-header nav ul li a {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      #main-header nav ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Donation Page Hero */
+      #donation-hero-section {
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        text-align: center;
+        padding: 60px 20px;
+        margin-bottom: 40px;
+      }
+      #donation-hero-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 3.5em;
+        margin-bottom: 15px;
+        line-height: 1.1;
+      }
+      #donation-hero-subtitle {
+        font-size: 1.4em;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* Donation Form Section */
+      #donation-form-section {
+        background-color: var(--bg-white);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      }
+      #form-header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      #form-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.5em;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+      }
+      #form-description {
+        font-size: 1.1em;
+        color: #555;
+      }
+
+      .form-group {
+        margin-bottom: 25px;
+      }
+      .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: var(--text-dark);
+        font-size: 1.05em;
+      }
+      .form-group input[type="text"],
+      .form-group input[type="email"],
+      .form-group input[type="tel"],
+      .form-group input[type="number"],
+      .form-group select {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+        font-size: 1em;
+        box-sizing: border-box; /* Include padding in element's total width and height */
+        transition: border-color 0.3s ease;
+      }
+      .form-group input[type="text"]:focus,
+      .form-group input[type="email"]:focus,
+      .form-group input[type="tel"]:focus,
+      .form-group input[type="number"]:focus,
+      .form-group select:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+      }
+
+      /* Styles for radio buttons that look like buttons */
+      .radio-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .radio-group input[type="radio"] {
+        display: none; /* Hide default radio button */
+      }
+      .radio-group label {
+        flex: 1;
+        min-width: 120px;
+        max-width: 180px;
+        text-align: center;
+        background-color: var(--bg-light);
+        border: 2px solid var(--border-color);
+        padding: 12px 15px;
+        border-radius: 8px;
+        font-size: 1.1em;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease, border-color 0.3s ease,
+          color 0.3s ease;
+        color: var(--primary-color);
+        margin-bottom: 0; /* Override default label margin */
+      }
+      .radio-group input[type="radio"]:checked + label {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: var(--text-light);
+      }
+      .radio-group label:hover:not(:has(input[type="radio"]:checked)) {
+        background-color: rgba(0, 123, 255, 0.1);
+      }
+
+      .payment-details {
+        border: 1px solid var(--primary-color);
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 20px;
+        background-color: var(--bg-light);
+        display: none; /* Hidden by default */
+      }
+      .payment-details.active {
+        display: block; /* Shown when active */
+      }
+      .payment-details .form-group {
+        margin-bottom: 15px;
+      }
+      .payment-details label {
+        font-size: 0.95em;
+      }
+      .payment-details input[type="text"],
+      .payment-details input[type="number"],
+      .payment-details input[type="month"] {
+        padding: 10px 12px;
+        font-size: 0.95em;
+      }
+      .cvv-expiry {
+        display: flex;
+        gap: 15px;
+      }
+      .cvv-expiry .form-group {
+        flex: 1;
+      }
+
+      .submit-button {
+        width: 100%;
+        background-color: var(--secondary-color);
+        color: var(--text-light);
+        padding: 18px 0;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.5em;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        margin-top: 40px;
+        box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+      }
+      .submit-button:hover {
+        background-color: #218838;
+        transform: translateY(-3px);
+      }
+      .privacy-note {
+        font-size: 0.9em;
+        color: #666;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .privacy-note a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+      .privacy-note a:hover {
+        text-decoration: underline;
+      }
+
+      /* Footer */
+      #main-footer {
+        background-color: #333;
+        color: var(--text-light);
+        padding: 40px 0;
+        text-align: center;
+        font-size: 0.9em;
+        margin-top: 60px;
+      }
+      #main-footer .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      #main-footer .footer-links ul li {
+        margin: 0 15px;
+      }
+      #main-footer .footer-links ul li a {
+        color: var(--text-light);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      #main-footer .footer-links ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        #main-header {
+          flex-direction: column;
+        }
+        #main-header nav ul {
+          margin-top: 15px;
+        }
+        #donation-hero-title {
+          font-size: 2.8em;
+        }
+        #donation-hero-subtitle {
+          font-size: 1.2em;
+        }
+        #donation-form-section {
+          padding: 25px;
+        }
+        #form-title {
+          font-size: 2em;
+        }
+        .radio-group label {
+          flex: 1 1 45%; /* Two buttons per row */
+          padding: 10px 15px;
+          font-size: 1em;
+        }
+        .cvv-expiry {
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 480px) {
+        .radio-group label {
+          flex: 1 1 100%; /* One button per row */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KCS256G4"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header id="main-header" class="container">
+      <a href="index.html" class="logo" id="header-logo"
+        >Hope & Hands Foundation</a
+      >
+      <nav>
+        <ul id="main-navigation">
+          <li>
+            <a href="awareness-page.html" id="nav-awareness">Our Cause</a>
+          </li>
+          <li>
+            <a href="volunteer-signup.html" id="nav-volunteer">Volunteer</a>
+          </li>
+          <li>
+            <a
+              href="donation-platform.html"
+              class="cta-button"
+              id="nav-donate-button"
+              >Donate Now</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="donation-hero-section">
+      <div class="container">
+        <h1 id="donation-hero-title">Your Generosity Changes Lives.</h1>
+        <p id="donation-hero-subtitle">
+          Every contribution, big or small, directly fuels our programs and
+          brings hope to those who need it most.
+        </p>
+      </div>
+    </section>
+
+    <section id="donation-form-section" class="container">
+      <div id="form-header">
+        <h2 id="form-title">Make a Secure Donation</h2>
+        <p id="form-description">
+          Choose an amount, select frequency, and provide your details.
+        </p>
+      </div>
+
+      <form action="thankyou.html" method="GET" id="donation-form">
+        <div class="form-group" id="donation-amount-group">
+          <label for="donation-amount-choice"
+            >Choose Your Donation Amount:</label
+          >
+          <div class="radio-group">
+            <input
+              type="radio"
+              id="amount-500"
+              name="donation_amount"
+              value="500"
+              checked
+            />
+            <label for="amount-500">₹500</label>
+
+            <input
+              type="radio"
+              id="amount-1000"
+              name="donation_amount"
+              value="1000"
+            />
+            <label for="amount-1000">₹1,000</label>
+
+            <input
+              type="radio"
+              id="amount-2500"
+              name="donation_amount"
+              value="2500"
+            />
+            <label for="amount-2500">₹2,500</label>
+
+            <input
+              type="radio"
+              id="amount-5000"
+              name="donation_amount"
+              value="5000"
+            />
+            <label for="amount-5000">₹5,000</label>
+
+            <input
+              type="radio"
+              id="amount-custom-radio"
+              name="donation_amount"
+              value="custom"
+            />
+            <label for="amount-custom-radio">Other Amount</label>
+          </div>
+          <input
+            type="number"
+            id="custom-amount-input"
+            name="custom_amount_value"
+            placeholder="Enter custom amount (e.g., 750)"
+            style="display: none"
+            min="1"
+            step="any"
+          />
+        </div>
+
+        <div class="form-group" id="donation-frequency-group">
+          <label>Donation Frequency:</label>
+          <div class="radio-group">
+            <input
+              type="radio"
+              id="frequency-one-time"
+              name="donation_frequency"
+              value="one-time"
+              checked
+            />
+            <label for="frequency-one-time" id="label-one-time">One-Time</label>
+
+            <input
+              type="radio"
+              id="frequency-monthly"
+              name="donation_frequency"
+              value="monthly"
+            />
+            <label for="frequency-monthly" id="label-monthly">Monthly</label>
+          </div>
+        </div>
+
+        <div class="form-group" id="donor-details-group">
+          <label for="full-name">Full Name:</label>
+          <input
+            type="text"
+            id="full-name"
+            name="full_name"
+            placeholder="John Doe"
+            required
+          />
+        </div>
+
+        <div class="form-group" id="contact-details-group">
+          <label for="email-address">Email Address:</label>
+          <input
+            type="email"
+            id="email-address"
+            name="email_address"
+            placeholder="john.doe@example.com"
+            required
+          />
+        </div>
+
+        <div class="form-group" id="phone-details-group">
+          <label for="phone-number">Phone Number (Optional):</label>
+          <input
+            type="tel"
+            id="phone-number"
+            name="phone_number"
+            placeholder="+91 98765 43210"
+          />
+        </div>
+
+        <div class="form-group" id="payment-method-group">
+          <label for="payment-method-select">Select Payment Method:</label>
+          <select id="payment-method-select" name="payment_method" required>
+            <option value="">-- Choose Payment Method --</option>
+            <option value="credit-card">Credit/Debit Card</option>
+            <option value="upi">UPI</option>
+            <option value="netbanking">Net Banking</option>
+          </select>
+        </div>
+
+        <div class="payment-details" id="credit-card-details">
+          <div class="form-group">
+            <label for="card-number">Card Number:</label>
+            <input
+              type="text"
+              id="card-number"
+              name="card_number"
+              placeholder="XXXX XXXX XXXX XXXX"
+              maxlength="19"
+            />
+          </div>
+          <div class="form-group cvv-expiry">
+            <div class="form-group">
+              <label for="expiry-date">Expiry Date (MM/YY):</label>
+              <input
+                type="text"
+                id="expiry-date"
+                name="expiry_date"
+                placeholder="MM/YY"
+                maxlength="5"
+              />
+            </div>
+            <div class="form-group">
+              <label for="cvv">CVV:</label>
+              <input
+                type="text"
+                id="cvv"
+                name="cvv"
+                placeholder="XXX"
+                maxlength="4"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="card-holder-name">Card Holder Name:</label>
+            <input
+              type="text"
+              id="card-holder-name"
+              name="card_holder_name"
+              placeholder="Name on Card"
+            />
+          </div>
+        </div>
+
+        <div class="payment-details" id="upi-details">
+          <div class="form-group">
+            <label for="upi-id">UPI ID:</label>
+            <input
+              type="text"
+              id="upi-id"
+              name="upi_id"
+              placeholder="yourname@bankupi"
+            />
+          </div>
+          <p class="privacy-note">
+            You will receive a payment request on your UPI app.
+          </p>
+        </div>
+
+        <div class="payment-details" id="netbanking-details">
+          <div class="form-group">
+            <label for="select-bank">Select Bank:</label>
+            <select id="select-bank" name="select_bank">
+              <option value="">-- Select Your Bank --</option>
+              <option value="sbi">State Bank of India</option>
+              <option value="hdfc">HDFC Bank</option>
+              <option value="icici">ICICI Bank</option>
+              <option value="axis">Axis Bank</option>
+              <option value="pnb">Punjab National Bank</option>
+              <option value="others">Other Bank</option>
+            </select>
+          </div>
+          <p class="privacy-note">
+            You will be redirected to your bank's secure payment gateway.
+          </p>
+        </div>
+
+        <button type="submit" class="submit-button" id="submit-donation-button">
+          Donate Securely
+        </button>
+
+        <p class="privacy-note" id="privacy-policy-note">
+          Your donation is secure and tax-deductible. We respect your privacy.
+          Read our
+          <a href="privacy-policy.html" id="privacy-link">Privacy Policy</a>.
+        </p>
+      </form>
+    </section>
+
+    <footer id="main-footer">
+      <div class="container">
+        <div class="footer-links" id="footer-navigation">
+          <ul>
+            <li><a href="awareness-page.html">Our Cause</a></li>
+            <li><a href="volunteer-signup.html">Volunteer</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <p id="footer-copyright">
+          &copy; 2025 Hope & Hands Foundation. All rights reserved.
+        </p>
+        <p id="footer-address">
+          123 Charity Lane, Compassion City, Hyderabad, Telangana 5000XX
+        </p>
+        <p id="footer-contact-info">
+          Email: info@hopeandhands.org | Phone: +91 88888 77777
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const amountRadios = document.querySelectorAll(
+          'input[name="donation_amount"]'
+        );
+        const customAmountInput = document.getElementById(
+          "custom-amount-input"
+        );
+        const paymentMethodSelect = document.getElementById(
+          "payment-method-select"
+        );
+        const paymentDetailsSections =
+          document.querySelectorAll(".payment-details");
+
+        // --- Amount Selection Logic ---
+        // Show/hide custom amount input based on radio selection
+        amountRadios.forEach((radio) => {
+          radio.addEventListener("change", function () {
+            if (this.id === "amount-custom-radio") {
+              customAmountInput.style.display = "block";
+              customAmountInput.setAttribute("required", "required"); // Make it required when visible
+              customAmountInput.focus();
+            } else {
+              customAmountInput.style.display = "none";
+              customAmountInput.removeAttribute("required"); // Not required when hidden
+              customAmountInput.value = ""; // Clear value when hidden
+            }
+          });
+        });
+
+        // Initialize: Check if custom radio is already checked on load (e.g., from browser back button)
+        if (document.getElementById("amount-custom-radio").checked) {
+          customAmountInput.style.display = "block";
+          customAmountInput.setAttribute("required", "required");
+        }
+
+        // --- Payment Method Selection Logic ---
+        paymentMethodSelect.addEventListener("change", function () {
+          const selectedMethod = this.value;
+
+          // Hide all payment details sections
+          paymentDetailsSections.forEach((section) => {
+            section.classList.remove("active");
+            // Remove 'required' attribute from all fields in hidden sections
+            section.querySelectorAll("input, select").forEach((field) => {
+              field.removeAttribute("required");
+            });
+          });
+
+          // Show the corresponding payment details section and make its fields required
+          const activeSection = document.getElementById(
+            selectedMethod + "-details"
+          );
+          if (activeSection) {
+            activeSection.classList.add("active");
+            activeSection.querySelectorAll("input, select").forEach((field) => {
+              // Only add required to fields that are relevant for submission
+              if (field.type !== "hidden" && field.name !== "select_bank") {
+                // Example: bank select in netbanking might be optional or have other validation
+                field.setAttribute("required", "required");
+              }
+            });
+          }
+        });
+
+        // Trigger change event on load to show initial payment details if a default is selected
+        paymentMethodSelect.dispatchEvent(new Event("change"));
+
+        // --- Form Submission / Basic Validation ---
+        const donationForm = document.getElementById("donation-form");
+        donationForm.addEventListener("submit", function (event) {
+          // Client-side validation before submission (more robust validation should be server-side)
+
+          const selectedAmountRadio = document.querySelector(
+            'input[name="donation_amount"]:checked'
+          );
+          if (!selectedAmountRadio) {
+            alert("Please select a donation amount.");
+            event.preventDefault();
+            return;
+          }
+
+          if (
+            selectedAmountRadio.value === "custom" &&
+            (!customAmountInput.value ||
+              parseFloat(customAmountInput.value) <= 0)
+          ) {
+            alert("Please enter a valid custom donation amount.");
+            event.preventDefault();
+            return;
+          }
+
+          if (paymentMethodSelect.value === "") {
+            alert("Please select a payment method.");
+            event.preventDefault();
+            return;
+          }
+
+          // If all basic client-side checks pass, the form would naturally submit.
+          // In a real application, this submission would go to a backend script
+          // that handles payment gateway integration and redirects to the thank you page.
+          // For this simple HTML, we'll simulate a redirect:
+          // event.preventDefault(); // Uncomment this line if you don't want the browser to actually submit the form
+          // alert('Form submitted! (Simulated)');
+          // window.location.href = 'thankyou.html'; // Simulate redirect to thank you page
+        });
+      });
+    </script>
+  </body>
+</html>

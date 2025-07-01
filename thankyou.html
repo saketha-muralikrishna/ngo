@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KCS256G4");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You for Your Donation - Hope & Hands Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Basic CSS for demonstration - In a real project, link to an external CSS file */
+      :root {
+        --primary-color: #007bff; /* A vibrant blue for main actions */
+        --secondary-color: #28a745; /* A supportive green for success/impact */
+        --accent-color: #ffc107; /* A warm yellow for highlights */
+        --text-dark: #333;
+        --text-light: #f8f9fa;
+        --bg-light: #f8f9fa;
+        --bg-white: #ffffff;
+        --border-color: #ddd;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: var(--text-dark);
+        line-height: 1.7;
+        background-color: var(--bg-light);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensures footer is at bottom */
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Header */
+      #main-header {
+        background-color: var(--bg-white);
+        padding: 15px 0;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      #main-header .logo {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+      #main-header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      #main-header nav ul li {
+        margin-left: 25px;
+      }
+      #main-header nav ul li a {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      #main-header nav ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Thank You Hero Section */
+      #thankyou-hero-section {
+        background-color: var(--secondary-color); /* Green for success */
+        color: var(--text-light);
+        text-align: center;
+        padding: 80px 20px;
+        margin-bottom: 40px;
+        flex-grow: 1; /* Allows this section to take up available space */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #thankyou-icon {
+        font-size: 5em;
+        margin-bottom: 20px;
+        color: var(--accent-color); /* A pop of yellow */
+      }
+      #thankyou-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 4em;
+        margin-bottom: 15px;
+        line-height: 1.1;
+      }
+      #thankyou-subtitle {
+        font-size: 1.6em;
+        max-width: 800px;
+        margin: 0 auto 30px auto;
+        font-weight: 400;
+      }
+      .cta-button {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        padding: 18px 40px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 1.4em;
+        font-weight: 700;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        margin-top: 20px;
+      }
+      .cta-button:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+      }
+
+      /* Impact Section */
+      #impact-section {
+        background-color: var(--bg-white);
+        padding: 50px 20px;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+      }
+      #impact-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.5em;
+        color: var(--primary-color);
+        margin-bottom: 25px;
+      }
+      #impact-description {
+        font-size: 1.2em;
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        color: #555;
+      }
+      .impact-points-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+      .impact-item {
+        background-color: var(--bg-light);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        text-align: left;
+      }
+      .impact-item h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8em;
+        color: var(--secondary-color);
+        margin-bottom: 10px;
+      }
+      .impact-item p {
+        font-size: 1.05em;
+        color: #444;
+      }
+
+      /* Connect Section */
+      #connect-section {
+        padding: 50px 20px;
+        text-align: center;
+        background-color: var(--bg-light);
+      }
+      #connect-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.5em;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+      }
+      #connect-description {
+        font-size: 1.2em;
+        max-width: 700px;
+        margin: 0 auto 40px auto;
+        color: #555;
+      }
+      .connect-options {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .connect-option {
+        flex: 1;
+        min-width: 250px;
+        max-width: 300px;
+        background-color: var(--bg-white);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        text-decoration: none;
+        color: var(--text-dark);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .connect-option:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+      .connect-option .icon {
+        font-size: 3em;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+      }
+      .connect-option h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6em;
+        margin-bottom: 10px;
+      }
+      .connect-option p {
+        font-size: 0.95em;
+        color: #666;
+      }
+
+      /* Footer */
+      #main-footer {
+        background-color: #333;
+        color: var(--text-light);
+        padding: 40px 0;
+        text-align: center;
+        font-size: 0.9em;
+        margin-top: auto; /* Pushes footer to the bottom */
+      }
+      #main-footer .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      #main-footer .footer-links ul li {
+        margin: 0 15px;
+      }
+      #main-footer .footer-links ul li a {
+        color: var(--text-light);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      #main-footer .footer-links ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        #main-header {
+          flex-direction: column;
+        }
+        #main-header nav ul {
+          margin-top: 15px;
+        }
+        #thankyou-hero-title {
+          font-size: 3em;
+        }
+        #thankyou-subtitle {
+          font-size: 1.4em;
+        }
+        #impact-title,
+        #connect-title {
+          font-size: 2em;
+        }
+        .impact-points-grid,
+        .connect-options {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 480px) {
+        #thankyou-hero-title {
+          font-size: 2.5em;
+        }
+        #thankyou-subtitle {
+          font-size: 1.1em;
+        }
+        .cta-button {
+          font-size: 1.1em;
+          padding: 15px 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KCS256G4"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header id="main-header" class="container">
+      <a href="index.html" class="logo" id="header-logo"
+        >Hope & Hands Foundation</a
+      >
+      <nav>
+        <ul id="main-navigation">
+          <li>
+            <a href="awareness-page.html" id="nav-awareness">Our Cause</a>
+          </li>
+          <li>
+            <a href="volunteer-signup.html" id="nav-volunteer">Volunteer</a>
+          </li>
+          <li>
+            <a href="donation-platform.html" id="nav-donate-button">Donate</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="thankyou-hero-section">
+      <div class="container" id="thankyou-content">
+        <div id="thankyou-icon">&#x2764;&#xfe0f;</div>
+        <h1 id="thankyou-title">Thank You For Your Generosity!</h1>
+        <p id="thankyou-subtitle">
+          Your donation has been successfully processed and a receipt has been
+          sent to your email address. Your support makes a real difference!
+        </p>
+        <a
+          href="awareness-page.html"
+          class="cta-button"
+          id="explore-impact-button"
+          >Explore Our Impact</a
+        >
+      </div>
+    </section>
+
+    <section id="impact-section">
+      <div class="container">
+        <h2 id="impact-title">See Your Impact in Action</h2>
+        <p id="impact-description">
+          Every rupee you contribute directly fuels our vital programs. Here's
+          how your kindness transforms lives in Hyderabad and beyond:
+        </p>
+
+        <div class="impact-points-grid" id="impact-points">
+          <div class="impact-item" id="impact-education">
+            <h3>Education for Bright Futures</h3>
+            <p>
+              Your donation helps provide school supplies, tuition fees, and a
+              safe learning environment for children, breaking cycles of
+              illiteracy and poverty.
+            </p>
+          </div>
+          <div class="impact-item" id="impact-nutrition">
+            <h3>Nourishing Health & Well-being</h3>
+            <p>
+              You ensure nutritious meals for vulnerable families and access to
+              essential medical care, improving community health and vitality.
+            </p>
+          </div>
+          <div class="impact-item" id="impact-livelihoods">
+            <h3>Sustainable Livelihood Programs</h3>
+            <p>
+              Your support empowers adults with vocational training and
+              micro-financing, fostering economic independence and stable
+              futures.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="connect-section">
+      <div class="container">
+        <h2 id="connect-title">Stay Connected and Get Involved</h2>
+        <p id="connect-description">
+          Your journey with Hope & Hands Foundation doesn't end here. There are
+          many ways to continue being a part of our mission.
+        </p>
+        <div class="connect-options" id="further-engagement-options">
+          <a
+            href="volunteer-signup.html"
+            class="connect-option"
+            id="option-volunteer"
+          >
+            <div class="icon">&#128100;</div>
+            <h3>Become a Volunteer</h3>
+            <p>
+              Dedicate your time and skills to directly support our programs on
+              the ground.
+            </p>
+          </a>
+          <a href="latest-news.html" class="connect-option" id="option-news">
+            <div class="icon">&#128240;</div>
+            <h3>Read Our Latest News</h3>
+            <p>
+              Stay updated on our projects, success stories, and the difference
+              your support makes.
+            </p>
+          </a>
+          <a href="contact-us.html" class="connect-option" id="option-contact">
+            <div class="icon">&#128222;</div>
+            <h3>Contact Us</h3>
+            <p>
+              Have questions or want to discuss your impact? We'd love to hear
+              from you!
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer id="main-footer">
+      <div class="container">
+        <div class="footer-links" id="footer-navigation">
+          <ul>
+            <li><a href="awareness-page.html">Our Cause</a></li>
+            <li><a href="volunteer-signup.html">Volunteer</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <p id="footer-copyright">
+          &copy; 2025 Hope & Hands Foundation. All rights reserved.
+        </p>
+        <p id="footer-address">
+          123 Charity Lane, Compassion City, Hyderabad, Telangana 5000XX
+        </p>
+        <p id="footer-contact-info">
+          Email: info@hopeandhands.org | Phone: +91 88888 77777
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
